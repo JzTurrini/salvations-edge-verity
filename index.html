@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verity</title>
     <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
     <script
@@ -27,7 +27,7 @@
         font-weight: bold;
         text-transform: uppercase;
       }
-      #dissection{
+      #dissection {
         background-color: #f1f1f1;
       }
       @media (prefers-color-scheme: dark) {
@@ -45,7 +45,8 @@
           border-color: #616161 !important;
         }
 
-        input, select{
+        input,
+        select {
           background-color: #1f1f1f;
           border-color: #616161 !important;
         }
@@ -58,11 +59,11 @@
           background-color: #3a414a !important;
         }
 
-        .text-purple-800{
+        .text-purple-800 {
           color: #b69ae5 !important;
         }
 
-        img{
+        img:not(.reddit) {
           filter: invert();
         }
       }
@@ -252,9 +253,7 @@
         </div>
         <div class="flex flex-row gap-4" style="align-items: end;">
           <div class="w-1/3 flex flex-col gap-2">
-            <label class="header-sides" for="guard1"
-              >Esquerda Dentro</label
-            >
+            <label class="header-sides" for="guard1">Esquerda Dentro</label>
             <template x-if="displayOptions.showinsideImages">
               <div class="flex flex-row flex-wrap gap-2 flex-justify">
                 <template x-for="imageUrl in twoDWithImages">
@@ -456,7 +455,8 @@
           </div>
         </div>
         <div
-          class="flex flex-col border-2 pt-2 pb-4 px-4 rounded-md w-full mt-4" id="dissection"
+          class="flex flex-col border-2 pt-2 pb-4 px-4 rounded-md w-full mt-4"
+          id="dissection"
         >
           <div class="font-bold text-lg">Dissecação</div>
           <div class="w-full flex flex-row">
@@ -511,13 +511,23 @@
         <div class="flex flex-row items-center gap-2">
           seratne
           <a href="https://www.reddit.com/u/seratne/"
-            ><img src="images/reddit.svg" alt="Reddit" style="height: 1rem;" />
+            ><img
+              src="images/reddit.svg"
+              class="reddit"
+              alt="Reddit"
+              style="height: 1rem;"
+            />
           </a>
         </div>
         <div class="flex flex-row items-center gap-2">
           inertxenon
           <a href="https://www.reddit.com/u/inertxenon/"
-            ><img src="images/reddit.svg" alt="Reddit" style="height: 1rem;" />
+            ><img
+              src="images/reddit.svg"
+              class="reddit"
+              alt="Reddit"
+              style="height: 1rem;"
+            />
           </a>
         </div>
         <hr />
