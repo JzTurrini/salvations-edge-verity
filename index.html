@@ -27,6 +27,45 @@
         font-weight: bold;
         text-transform: uppercase;
       }
+      #dissection{
+        background-color: #f1f1f1;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #1f1f1f;
+          color: #bfbfbf;
+        }
+        .header {
+          background-color: #4d4d4d;
+          color: #bfbfbf;
+        }
+
+        #dissection {
+          background-color: #262626;
+          border-color: #616161 !important;
+        }
+
+        input, select{
+          background-color: #1f1f1f;
+          border-color: #616161 !important;
+        }
+
+        .border-gray-300 {
+          border-color: #616161 !important;
+        }
+
+        .border-blue-800 {
+          background-color: #3a414a !important;
+        }
+
+        .text-purple-800{
+          color: #b69ae5 !important;
+        }
+
+        img{
+          filter: invert();
+        }
+      }
     </style>
   </head>
   <body
@@ -417,7 +456,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col border-2 pt-2 pb-4 px-4 rounded-md w-full mt-4" style="background-color: #f1f1f1;"
+          class="flex flex-col border-2 pt-2 pb-4 px-4 rounded-md w-full mt-4" id="dissection"
         >
           <div class="font-bold text-lg">Dissecação</div>
           <div class="w-full flex flex-row">
