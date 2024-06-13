@@ -3,8 +3,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Traveler - Destiny 2 :: Verity</title>
-    <link rel="icon" type="image/png" href="../templates/general/assets/img/favicon.png" />
-    <meta name="description" content="Calculadora de símbolos e formas para o quarto encontro Veracidade (Verity) da Raid Limiar da Salvação (Edge of Salvation) da DLC A Forma Final de Destiny 2." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../templates/general/assets/img/favicon.png"
+    />
+    <meta
+      name="description"
+      content="Calculadora de símbolos e formas para o quarto encontro Veracidade (Verity) da Raid Limiar da Salvação (Edge of Salvation) da DLC A Forma Final de Destiny 2."
+    />
     <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
     <script
       defer
@@ -31,6 +38,20 @@
       }
       #dissection {
         background-color: #f1f1f1;
+      }
+      .final-shapes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 3px;
+        border-bottom: 2px #CCC solid;
+      }
+      .final-shapes img {
+        width: 30px;
+        margin-right: 5px;
+      }
+      .icon-help {
+        cursor: help;
       }
       @media (prefers-color-scheme: dark) {
         html {
@@ -68,6 +89,9 @@
         img:not(.reddit) {
           filter: invert();
         }
+        .final-shapes {
+        border-bottom: 2px #616161 solid;
+      }
       }
     </style>
   </head>
@@ -247,7 +271,7 @@
           <input
             class="p-2 border-2 border-gray-300 rounded-md"
             type="text"
-            placeholder="CST"
+            placeholder="CQT"
             id="nameField"
             x-model="insideCallouts"
             x-on:keyup="setInsideCallouts()"
@@ -460,34 +484,55 @@
           class="flex flex-col border-2 pt-2 pb-4 px-4 rounded-md w-full mt-4"
           id="dissection"
         >
-          <div class="font-bold text-lg">Dissecação</div>
+          <div class="font-bold text-lg">Dissecar <span class="icon-help" title="Abaixo a lista do que precisa ser extraído de cada um dos elementos para criar as formas finais. As formas finais estão exibidas abaixo com o respectivo símbolo à frente.">ℹ️</span></div>
           <div class="w-full flex flex-row">
             <div class="flex flex-col w-1/3">
-              <span
-                class="text-purple-800 font-bold"
-                x-text="neededThreeD()[0]?.name"
-              >
-              </span>
+
+              <div class="final-shapes">
+                <img
+                  class="w-10 h-10"
+                  x-bind:src="neededThreeD()[0]?.image ?? null"
+                  x-bind:alt="neededThreeD()[0]?.name ?? null"
+                />
+                <span class="text-purple-800 font-bold" x-text="neededThreeD()[0]?.name"></span>
+                </span>
+              </div>
 
               <span x-html="displayNeededSymbols(neededSymbols()?.left ?? [])"
                 >-</span
               >
             </div>
-            <div class="flex flex-col gap-2 w-1/3">
-              <span
+            <div class="flex flex-col w-1/3">
+              <div class="final-shapes">
+                <img
+                  class="w-10 h-10"
+                  x-bind:src="neededThreeD()[1]?.image ?? null"
+                  x-bind:alt="neededThreeD()[1]?.name ?? null"
+                />
+                <span
                 class="text-purple-800 font-bold"
                 x-text="neededThreeD()[1]?.name"
               ></span>
+                </span>
+              </div>
 
               <span
                 x-html="displayNeededSymbols(neededSymbols()?.middle ?? [])"
               ></span>
             </div>
-            <div class="flex flex-col gap-2 w-1/3">
-              <span
-                class="text-purple-800 font-bold"
-                x-text="neededThreeD()[2]?.name"
-              ></span>
+            <div class="flex flex-col w-1/3">
+              <div class="final-shapes">
+                <img
+                  class="w-10 h-10"
+                  x-bind:src="neededThreeD()[2]?.image ?? null"
+                  x-bind:alt="neededThreeD()[2]?.name ?? null"
+                />
+                <span
+                  class="text-purple-800 font-bold"
+                  x-text="neededThreeD()[2]?.name"
+                >
+                </span>
+              </div>
               <span
                 x-html="displayNeededSymbols(neededSymbols()?.right ?? [])"
               ></span>
