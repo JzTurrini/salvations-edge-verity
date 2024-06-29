@@ -142,6 +142,7 @@ class finalShape
                 }
             }
         }
+        //print_r($this->dissection);
 
         if (!$this->checkFinalShapes() && $this->dissection) {
             $this->dissect();
@@ -176,6 +177,7 @@ class finalShape
                         $indexOfOrigin = array_search($dissect['what'], $dissect['shapes']);
                         $indexOfDestination = array_search($whereToDissect['what'], $whereToDissect['shapes']);
 
+
                         $newOriginShapes = $dissect['shapes'];
                         $newDestinationShapes = $whereToDissect['shapes'];
                         $newOriginShapes[$indexOfOrigin] = $whereToDissect['shapes'][$indexOfDestination];
@@ -187,7 +189,7 @@ class finalShape
                         $shapesToLog = $this->displayPositionsToShape();
 
                         $this->logs[] = ($logTotal + 1) . 'º - Dissecar o <u>' . $dissect['what'] . "</u> da posição <strong>" . $this->positionTranslate[$dissect['where']] . "</strong> e depois.";
-                        $this->logs[] = ($logTotal + 2) . 'º - Dissecar o <u>' . $theShape['name'] . "</u> da posição <strong>" . $this->positionTranslate[$whereToDissect['where']] . "</strong>." . $shapesToLog . '<hr />';
+                        $this->logs[] = ($logTotal + 2) . 'º - Dissecar o <u>' . $whereToDissect['what'] . "</u> da posição <strong>" . $this->positionTranslate[$whereToDissect['where']] . "</strong>." . $shapesToLog . '<hr />';
 
                         $this->defineDissection();
                         return;
