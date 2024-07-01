@@ -20,9 +20,10 @@ $shapes3D = [
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Traveler - Destiny 2 :: Verity</title>
+    <title>The Traveler - Destiny 2 :: Verity / Veracidade</title>
     <link rel="icon" type="image/png" href="../templates/general/assets/img/favicon.png" />
     <meta name="description" content="Calculadora de símbolos e formas para o quarto encontro Veracidade (Verity) da Raid Limiar da Salvação (Edge of Salvation) da DLC A Forma Final de Destiny 2." />
+    <meta name="keywords" content="salvations edge, verity, veracidade, calculadora, calculator" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="></script>
     <script src="logic.js" asp-append-version="true"></script>
@@ -127,7 +128,7 @@ $shapes3D = [
 
         <header class="text-center mb-2">
             <h1>Limiar da Salvação - 4º Encontro <small>(Calculadora)</small></h1>
-            <small>Desenvolvido por <a href="https://linktr.ee/jzturrini">@JzTurrini</a></small>
+            <small>Desenvolvido por <a href="https://linktr.ee/jzturrini" target="_blank">@JzTurrini</a> | Quiz: <a href="https://forms.gle/Swh19CBhqQeGGLc38" target="_blank">Teste seus conhecimentos</a> | Playlist: <a href="https://www.youtube.com/playlist?list=PLNXLTU7etAR2l7ZEU9KclOu5HtsfiBhLj" target="_blank">Vídeos da Limiar</a> </small>
         </header>
 
         <div class="row text-center gap-2">
